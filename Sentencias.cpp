@@ -18,10 +18,9 @@ else
     cout<<"Lo sentimos no tienes la edad suficiente"<<endl;
 
     return 0;
-
 }
 
-    //sentencia if */
+//sentencia if */
 
  //SABER SI UN NUMERO ES MAYOR QUE OTRO (USANDO 3 VARIABLES)
     /*int A=0, B=0, C=0;
@@ -91,8 +90,9 @@ case 5:
 cout<<"Este es el quinto caso"<<endl;
 break;
 default:
-    break;   
+    break;
 }*/
+
 //SENTENCIA SWITCH VOCALES
 char vocal;
 cout<<"Ingrese su vocal"<<endl;

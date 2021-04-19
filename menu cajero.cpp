@@ -64,7 +64,7 @@ int main()
 
         if (retiro > saldo_en_cuenta) 
         {
-            cout<<"Saldo insuficiente en su cuenta";
+            cout<<"Saldo insuficiente en su cuenta, por favor intentelo de nuevo";
         }
         else
         {

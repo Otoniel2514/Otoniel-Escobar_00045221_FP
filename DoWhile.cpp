@@ -6,7 +6,7 @@ int main()
     int numero, suma = 0;
     do
     {
-        cout<<"Digite un numero entre 20 y 30"<<endl;
+        cout<<"Digite un numero que se encuentre, entre 20 y 30"<<endl;
         cin>>numero;
         if(numero > 0)
         {

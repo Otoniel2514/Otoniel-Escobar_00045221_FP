@@ -2,19 +2,19 @@
 #include "iostream"
 #include "stdlib.h"
 using namespace std;
-int main(){
+int main()
+{
     int numero, factorial=1;
 
-    cout<<"Digite su numero factorial:"<<endl;
+    cout<<"Digite un numero que sea factorial: "<<endl;
     cin>>numero;
 
     for (int i = 1; i <= numero; i++)
     {
       factorial*=i;
     }
-    cout<<"\nEl factorial del numero"<<numero<<"es:"<<factorial<<endl;
-     
-     system("pause");
-
+    cout<<"\nEl factorial del numero "<<numero<<" es: "<<factorial<<endl;
+    system("pause");
     return 0;
 }
+

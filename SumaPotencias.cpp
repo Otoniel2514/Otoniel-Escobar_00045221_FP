@@ -1,3 +1,4 @@
+//Crear un programa de suma de potencias 2^1^2^2^2^3^2^4...2^n
 
 #include "iostream"
 #include "stdlib.h"
@@ -7,18 +8,19 @@ int main()
 {
     int suma = 0, potencia = 0, n;
 
-    cout<<"Digite el numero de elementos a sumar"<<endl;
-    cin>>n; 
+    cout<<"Digite el numero de elementos que desea sumar: "<<endl;
+    cin>>n;
     cout<<"\n";
+    cout<<"Potencias: "<<endl;
 
     for (int i = 1; i <= n; i++)
     {
         potencia = pow(2,i);
-        cout<<"Potencia"<<endl;
+        cout<<potencia<<endl;
         suma += potencia;
 
     }
-    cout<<"Suma de sus potencias = "<<suma<<endl;
+    cout<<"La suma de sus potencias es = "<<suma<<endl;
     system("pause");
     return 0;
 

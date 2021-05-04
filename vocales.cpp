@@ -19,7 +19,6 @@ int main()
     case 'i':
     case 'I':
     case 'o':
-    case 'O':
     case 'u':
     case 'U':
     cout<<"Su letra digitada del orden alfetico, Si es una vocal."<<endl;

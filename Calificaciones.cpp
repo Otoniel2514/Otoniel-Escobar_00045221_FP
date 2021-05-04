@@ -9,7 +9,7 @@ int main()
     double promedio = 0;
 
 
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= 6; i++);
     {
         std::cout <<"Ingrese la calificacion obtenida: ";
         std::cin >> cal_aux;
@@ -17,9 +17,11 @@ int main()
         calificaciones = calificaciones + cal_aux;
     }
 
-    promedio = (calificaciones) / 5;
+    promedio = (calificaciones) / 6;
 
     std::cout <<"El promedio de sus calificaciones es: " <<promedio;
+
+    promedio = * 0.70 / 3;
 
     return 0;
 }

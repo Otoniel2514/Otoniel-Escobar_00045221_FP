@@ -2,12 +2,31 @@
 
 #include "iostream"
 #include "conio.h"
+#include <regex> 
 using namespace std;
 
+
+int validarNumero(int i, int j){
+    string numeroValido; 
+    regex soloNaturales("^[0-9]+$"); // Expresion regular que nos permitira validar solamente la entrada de numeros naturales.
+
+    while(true){
+        cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
+        cin >> numeroValido;
+
+        //Entra al if si el valor ingresado es un numero natural.
+        if(regex_match(numeroValido, soloNaturales)){
+            return stoi(numeroValido);
+        }else{
+            cout << "Solamente se permite el ingreso de numeros naturales." << endl;
+        }
+    }
+}
 void program()
 {   
     //Declaracion de variables
     int matriz[100][100], filas,columnas;
+    
     //Insertar filas columnas
     cout<<"Ingrese el numero de filas"<<endl;
     cin>>filas;
@@ -20,8 +39,8 @@ void program()
     {
         for (int j = 0; j < columnas; j++)
             {
-                cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
-                cin>>matriz[i][j];
+                matriz[i][j] = validarNumero(i, j); // Almacenamos el valor retornado por la función en la celda correspondiente de esta manera
+                //con seguridad sabremos que la matriz solo contendrá valores numericos naturales.
             }
         }
            //Mostrar la matriz original
@@ -45,6 +64,7 @@ void program()
 
         getch();
 }
+
 int main()
 {
     program();

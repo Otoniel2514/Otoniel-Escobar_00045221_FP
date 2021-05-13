@@ -3,17 +3,16 @@
 #include "conio.h"
 using namespace std;
 
-
 void program()
 {
-    int matriz[3][3];
+  int matriz[3][3];
 
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
           {
             //Llenando la matriz
-            cout<<"Digite un numero["<<i<<"]["<<j<<"]";
+            cout<<"Digite un numero["<<i<<"]["<<j<<"]: ";
             cin>>matriz[i][j];
           }
         }
@@ -33,6 +32,7 @@ void program()
           {
             cout<<matriz[j][i];
           }
+          cout<<endl;
         }
         getch();    
     

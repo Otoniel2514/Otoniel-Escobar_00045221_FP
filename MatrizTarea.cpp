@@ -17,7 +17,7 @@ int validarNumero(int i, int j){
         if(regex_match(numeroValido, soloNaturales)){
             return stoi(numeroValido);
         }else{
-            cout << "Solamente se permite el ingreso de numeros naturales." << endl;
+            cout << "Solamente se permite el ingreso de numeros naturales."<<endl;
         }
     }
 }
@@ -36,7 +36,7 @@ void program()
             filas = stoi(numeroValido);
             break; //Se usa el break para que se pueda finalizar la ejecucion del while
         }else{
-            cout << "Solamente se permite el ingreso de numeros naturales." << endl;
+            cout << "Solamente se permite el ingreso de numeros naturales."<<endl;
         }
     }
 
@@ -47,7 +47,7 @@ void program()
             columnas = stoi(numeroValido);
             break; // Se usa el break para que se pueda finalizar la ejecucion del while
         }else{
-            cout << "Solamente se permite el ingreso de numeros naturales." << endl;
+            cout << "Solamente se permite el ingreso de numeros naturales."<<endl;
         }
     }
 

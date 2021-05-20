@@ -16,9 +16,10 @@ void informacion(int nEmpleados)
 {
     cout<<"\nInformacion de empleados"<<endl;
     for (int i = 0; i < nEmpleados; i++)
-    {   
-        cin.ignore();
+    {  
+        string nombre; 
         cout<<"Ingrese el nombre del empleado: "<< i+1 << ": ";
+        getline(cin, nombre);
         cin >> empleado.nombreEmpleado[i];
         cout<<"Ingrese el sueldo de su empleado en dolares: $";
         cin >> empleado.sueldo[i];

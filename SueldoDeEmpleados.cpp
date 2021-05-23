@@ -17,9 +17,12 @@ void informacion(int nEmpleados)
     cout<<"\nInformacion de empleados"<<endl;
     for (int i = 0; i < nEmpleados; i++)
     {  
-        string nombre; 
+        char palabra [];
+        char palabra2[]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'}
+        char nombre[30];
+        
         cout<<"Ingrese el nombre del empleado: "<< i+1 << ": ";
-        getline(cin, nombre);
+        gets(nombre);
         cin >> empleado.nombreEmpleado[i];
         cout<<"Ingrese el sueldo de su empleado en dolares: $";
         cin >> empleado.sueldo[i];
@@ -55,8 +58,6 @@ void planilla(int nEmpleados)
         cout<<"Descuento de ISS (3.5%) y Renta (10%): "<<t<<endl;
         cout<<"Sueldo Neto: "<<empleado.sueldo[i]-t<<endl;
         cout<<"Dui del empleado: "<< empleado.dui[i]<<endl;
-
-
     }
     
 }

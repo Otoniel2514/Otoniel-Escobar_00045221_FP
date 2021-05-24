@@ -2,34 +2,30 @@
 //Tome en cuenta que el ISS 3.5% y la Renta es el 10%
 
 #include "iostream"
+#include "string.h"
 using namespace std;
 
 const int longCad = 20;
 struct
 {
-    char nombreEmpleado[longCad +1][50];
+    string nombreEmpleado[longCad +1][50];
     float sueldo[50];
-    int dui[50];
+    string dui[50];
 } empleado;
 
 void informacion(int nEmpleados)
 {
     cout<<"\nInformacion de empleados"<<endl;
     for (int i = 0; i < nEmpleados; i++)
-    {  
-        char palabra [];
-        char palabra2[]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'}
-        char nombre[30];
-        
-        cout<<"Ingrese el nombre del empleado: "<< i+1 << ": ";
-        gets(nombre);
-        cin >> empleado.nombreEmpleado[i];
-        cout<<"Ingrese el sueldo de su empleado en dolares: $";
-        cin >> empleado.sueldo[i];
-        cout<<"Ingrese el dui del empleado: ";
-        cin >> empleado.dui[i];
-
-    }
+    {
+        cin.ignore();
+        cout<<"Ingrese el nombre del empleado: "<< i+1 << ": "<<endl;
+        getline(cin,empleado.nombreEmpleado[i]);
+        cout<<"Ingrese el sueldo de su empleado en dolares: $"<<endl;
+        (cin>>empleado.sueldo[i]).get();
+        cout<<"Ingrese el dui del empleado: "<<endl;
+        cin>>empleado.dui[i];
+}
     return;
     
 }
@@ -38,12 +34,12 @@ void informe(int nEmpleados)
     cout<<"\tVer empleados"<<endl;
     for (int i = 0; i < nEmpleados; i++)
     {
+        cin.ignore();
         cout<<"Nombre del empleado: "<< empleado.nombreEmpleado[i]<<endl;
-        cout<<"Sueldo base: "<< empleado.sueldo[i]<<endl;
+        cout<<"Sueldo base: $"<< empleado.sueldo[i]<<endl;
         cout<<"DUI del empleado: "<< empleado.dui[i]<<endl;
     }
-    return;
-    
+    return;  
 }
 //Sueldos con descuentos de renta y seguro
 void planilla(int nEmpleados)
@@ -52,14 +48,13 @@ void planilla(int nEmpleados)
     float t;
     for (int i = 0; i < nEmpleados; i++)
     {
+        cin.ignore();
         cout<<"Nombre del empleado: "<<empleado.nombreEmpleado[i]<<endl;
-        t = empleado.sueldo[i] * 0.135;//t = al descuento del seguro y la renta de una vez
-        cout<<"Sueldo Bruto: "<<empleado.sueldo[i]<<endl;
-        cout<<"Descuento de ISS (3.5%) y Renta (10%): "<<t<<endl;
-        cout<<"Sueldo Neto: "<<empleado.sueldo[i]-t<<endl;
-        cout<<"Dui del empleado: "<< empleado.dui[i]<<endl;
+        t = empleado.sueldo[i] * 0.135;
+        cout<<"Sueldo Bruto: $"<<empleado.sueldo[i]<<endl;
+        cout<<"Descuento de ISS (3.5%) y Renta (10%): $"<<t<<endl;
+        cout<<"Sueldo Neto: $"<<empleado.sueldo[i]-t<<endl;
     }
-    
 }
 void menu()
 {
@@ -88,7 +83,7 @@ void menu()
             planilla(nEmpleados);
             break;
         case 4:
-        cout<<"Tenga un feliz dia"<<endl;
+        cout<<"Tenga un feliz dia y bendicciones en sus labores."<<endl;
             break;
 
         default:

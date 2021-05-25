@@ -1,4 +1,4 @@
-//Hacer un programa que muestre la matriz transpuesta visualmente a la matriz original.
+//Hacer un programa que muestre la matriz transpuesta visualmente a la matriz original
 
 #include "iostream"
 #include "conio.h"

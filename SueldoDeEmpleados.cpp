@@ -1,5 +1,5 @@
-//Realice un programa que ingrese datos de empleados con sus respectivos sueldos y descuentos mostrando el imforme del empleado y la planilla de empleados (a traves de un menu)
-//Tome en cuenta que el ISS 3.5% y la Renta es el 10%
+//Realice un programa que ingrese datos de empleados con sus respectivos sueldos y descuentos mostrando el imforme del empleado y la planilla 
+//de empleados (a traves de un menu) Tome en cuenta que el ISS 3.5% y la Renta es el 10%
 
 #include "iostream"
 #include "string.h"
@@ -8,7 +8,7 @@ using namespace std;
 const int longCad = 20;
 struct
 {
-    string nombreEmpleado[longCad +1][50];
+    char nombreEmpleado[longCad +1][50];
     float sueldo[50];
     string dui[50];
 } empleado;
@@ -19,15 +19,14 @@ void informacion(int nEmpleados)
     for (int i = 0; i < nEmpleados; i++)
     {
         cin.ignore();
-        cout<<"Ingrese el nombre del empleado: "<< i+1 << ": "<<endl;
-        getline(cin,empleado.nombreEmpleado[i]);
-        cout<<"Ingrese el sueldo de su empleado en dolares: $"<<endl;
-        (cin>>empleado.sueldo[i]).get();
-        cout<<"Ingrese el dui del empleado: "<<endl;
-        cin>>empleado.dui[i];
-}
+        cout<<"Ingrese el nombre del empleado: "<< i+1 << ": ";
+        cin >> empleado.nombreEmpleado[i];
+        cout<<"Ingrese el sueldo de su empleado en dolares: $";
+        cin >> empleado.sueldo[i];
+        cout<<"Ingrese el dui del empleado: ";
+        cin >> empleado.dui[i];
+    }
     return;
-    
 }
 void informe(int nEmpleados)
 {
@@ -84,6 +83,7 @@ void menu()
             break;
         case 4:
         cout<<"Tenga un feliz dia y bendicciones en sus labores."<<endl;
+        cout<<"\n";
             break;
 
         default:
